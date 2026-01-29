@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: system-ui, Arial, sans-serif;
+}
+
+
+.app-container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 64px 1fr 56px; 
+}
+
+
+
+img {
+max-width: 100%;
+display: block;
+}
+
+
+button {
+border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+.navbar {
+flex-direction: column;
+gap: 10px;
+text-align: center;
+}
+
+
+.product-grid {
+grid-template-columns: 1fr;
+}
+
+
+.details img {
+width: 100%;
+}
+
+
+.cart-item {
+flex-direction: column;
+gap: 8px;
+}
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+.product-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+}
